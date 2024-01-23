@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>zagadki.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #56a8f5;}
+.s5 { color: #2aacb8;}
+.s6 { color: #7a7e85;}
+.s7 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+zagadki.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Strona z zagadkami</span><span class="s0">&lt;/title&gt;</span>
+    <span class="s0">&lt;style&gt;</span>
+        <span class="s0">body </span><span class="s1">{</span>
+            <span class="s2">font-family</span><span class="s1">: </span><span class="s0">Arial</span><span class="s1">, </span><span class="s3">sans-serif</span><span class="s1">;</span>
+            <span class="s2">background-color</span><span class="s1">: </span><span class="s4">#f4f4f4</span><span class="s1">;</span>
+            <span class="s2">margin</span><span class="s1">: </span><span class="s5">0</span><span class="s1">;</span>
+            <span class="s2">padding</span><span class="s1">: </span><span class="s5">0</span><span class="s1">;</span>
+            <span class="s2">display</span><span class="s1">: </span><span class="s3">flex</span><span class="s1">;</span>
+            <span class="s2">align-items</span><span class="s1">: </span><span class="s3">center</span><span class="s1">;</span>
+            <span class="s2">justify-content</span><span class="s1">: </span><span class="s3">center</span><span class="s1">;</span>
+            <span class="s2">height</span><span class="s1">: </span><span class="s5">100</span><span class="s3">vh</span><span class="s1">;</span>
+            <span class="s2">color</span><span class="s1">: </span><span class="s4">#333</span><span class="s1">;</span>
+            <span class="s6">/* Kolor tekstu dla całej strony */</span>
+        <span class="s1">}</span>
+
+        <span class="s0">#puzzle-container </span><span class="s1">{</span>
+            <span class="s2">text-align</span><span class="s1">: </span><span class="s3">center</span><span class="s1">;</span>
+            <span class="s2">padding</span><span class="s1">: </span><span class="s5">20</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">background-color</span><span class="s1">: </span><span class="s4">#fff</span><span class="s1">;</span>
+            <span class="s2">border-radius</span><span class="s1">: </span><span class="s5">8</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">box-shadow</span><span class="s1">: </span><span class="s5">0 0 10</span><span class="s3">px </span><span class="s0">rgba</span><span class="s1">(</span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0.1</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.</span><span class="s0">input-container </span><span class="s1">{</span>
+            <span class="s2">position</span><span class="s1">: </span><span class="s3">relative</span><span class="s1">;</span>
+            <span class="s2">width</span><span class="s1">: </span><span class="s5">100</span><span class="s1">%;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">input </span><span class="s1">{</span>
+            <span class="s2">padding</span><span class="s1">: </span><span class="s5">5</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">margin</span><span class="s1">: </span><span class="s5">10</span><span class="s3">px </span><span class="s5">0</span><span class="s1">;</span>
+            <span class="s2">width</span><span class="s1">: </span><span class="s0">calc</span><span class="s1">(</span><span class="s5">100</span><span class="s1">% - </span><span class="s5">16</span><span class="s3">px</span><span class="s1">);</span>
+            <span class="s6">/* Odejmujemy padding dla pełnej szerokości */</span>
+        <span class="s1">}</span>
+
+        <span class="s0">iframe</span><span class="s1">,</span>
+        <span class="s0">img </span><span class="s1">{</span>
+            <span class="s2">max-width</span><span class="s1">: </span><span class="s5">100</span><span class="s1">%;</span>
+            <span class="s2">height</span><span class="s1">: </span><span class="s3">auto</span><span class="s1">;</span>
+            <span class="s2">margin-top</span><span class="s1">: </span><span class="s5">10</span><span class="s3">px</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s6">/* Kolor tekstu dla zagadki 1 */</span>
+        <span class="s0">#puzzle-text-1 </span><span class="s1">{</span>
+            <span class="s2">color</span><span class="s1">: </span><span class="s4">#fff</span><span class="s1">;</span>
+            <span class="s6">/* Biały kolor tekstu dla zagadki 1 */</span>
+        <span class="s1">}</span>
+
+        <span class="s0">#password-container </span><span class="s1">{</span>
+            <span class="s2">margin-top</span><span class="s1">: </span><span class="s5">20</span><span class="s3">px</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">#content-container </span><span class="s1">{</span>
+            <span class="s2">margin-top</span><span class="s1">: </span><span class="s5">20</span><span class="s3">px</span><span class="s1">;</span>
+        <span class="s1">}</span>
+    <span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;puzzle-container&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;h2 </span><span class="s2">id</span><span class="s3">=&quot;puzzle-number&quot;</span><span class="s0">&gt;&lt;/h2&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;puzzle-content&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;input-container&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;passwordInput&quot;</span><span class="s0">&gt;</span><span class="s1">Hasło:</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;passwordInput&quot; </span><span class="s2">placeholder</span><span class="s3">=&quot;Wprowadź hasło&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;password-container&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
+    <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">checkPassword()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">Sprawdź</span><span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;p </span><span class="s2">id</span><span class="s3">=&quot;result&quot;</span><span class="s0">&gt;&lt;/p&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;media-container&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;content-container&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+    <span class="s7">let </span><span class="s1">currentPuzzle = </span><span class="s5">1</span><span class="s1">;</span>
+    <span class="s7">const </span><span class="s1">puzzles = [</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 1&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Speed-Tank&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 2&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Nie dotykać urządzenie elektryczne&quot;</span><span class="s1">, content: </span><span class="s3">&quot;EOYAUĄEIEEEYE&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 3&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Czarne jajo&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 4&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Magulo&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Przepis:&lt;br&gt;- gówno 10g&lt;br&gt;- cebula 30g&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 5&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Dzieja&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Podmiot liryczny prawdopodobnie się zgubił i zdezorientowany miejscem, w ktorym się znajduje, zadaje adekwatne pytanie, ale nie dodaje na końcu czasownika być w czasie teraźniejszym w 1 osobie liczby pojedynczej.&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 6&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Czas to pieniądz, ale nie tylko pieniądz.&quot; </span><span class="s1">}, </span><span class="s6">// Hasło do tej zagadki to aktualna godzina</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 7&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Mazurowska strona&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 8&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Gadzik&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 9&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Wuzel&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Czego oczy nie widzą tego sercu nie żal&lt;br&gt;&lt;span style='color: white;'&gt;Wuzel&lt;/span&gt;&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 10&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Danka sklepowa&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 11&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Sprawdź się&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 12&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Lasek&quot;</span><span class="s1">, content: </span><span class="s3">&quot;50.813334, 22.536243&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 13&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;13&quot;</span><span class="s1">, content: </span><span class="s3">&quot;&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 14&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Bandycki numer&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Niedozwolony manewr uliczny&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 15&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Spot-dup&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 16&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Debil&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 17&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Radiowóz&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Potoczna nazwa na wózek na maliny&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 18&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;35&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Ile lat trzeba pracować żeby mieć 500zł renty?&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 19&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Zdybać&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Hasło trzeba ZNALEŹĆ&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 20&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Lelewel&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Nikt nie wie kim był jąkający się poziom&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 21&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Dobra&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Wiesz co?&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 22&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Łotrocz&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Wieś na ł&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 23&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Sura&quot;</span><span class="s1">, content: </span><span class="s3">&quot;- jura&lt;br&gt;- aura&lt;br&gt;- natura&lt;br&gt;- emerytura&lt;br&gt;- kura&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 24&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Sentino&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Poproś prowadzącego o plik&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 25&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Płapładziadek&quot;</span><span class="s1">, content: </span><span class="s3">&quot;Prapradziadek ~ Paweł Biełnat&quot; </span><span class="s1">},</span>
+        <span class="s1">{ question: </span><span class="s3">&quot;Zagadka 26&quot;</span><span class="s1">, answer: </span><span class="s3">&quot;Lukas W&quot;</span><span class="s1">, content: </span><span class="s3">&quot;4.5/23.2/2.14/19.3/1.1/   /20.5&quot; </span><span class="s1">}</span>
+    <span class="s1">];</span>
+
+    <span class="s7">function </span><span class="s1">loadPuzzle() {</span>
+        <span class="s7">const </span><span class="s1">puzzleNumberElement = document.getElementById(</span><span class="s3">'puzzle-number'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">puzzleContentElement = document.getElementById(</span><span class="s3">'puzzle-content'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">passwordContainer = document.getElementById(</span><span class="s3">'password-container'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">passwordInput = document.getElementById(</span><span class="s3">'passwordInput'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">resultElement = document.getElementById(</span><span class="s3">'result'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">mediaContainer = document.getElementById(</span><span class="s3">'media-container'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">contentContainer = document.getElementById(</span><span class="s3">'content-container'</span><span class="s1">);</span>
+
+        <span class="s1">puzzleNumberElement.textContent = </span><span class="s3">`Zagadka </span><span class="s1">${currentPuzzle}</span><span class="s3">`</span><span class="s1">;</span>
+        <span class="s1">passwordInput.value = </span><span class="s3">''</span><span class="s1">;</span>
+        <span class="s1">resultElement.textContent = </span><span class="s3">''</span><span class="s1">;</span>
+
+        <span class="s7">const </span><span class="s1">mediaContent = puzzles[currentPuzzle - </span><span class="s5">1</span><span class="s1">].content;</span>
+
+        <span class="s7">if </span><span class="s1">(mediaContent.includes(</span><span class="s3">'imgur'</span><span class="s1">) || mediaContent.includes(</span><span class="s3">'tinypic'</span><span class="s1">) || mediaContent.includes(</span><span class="s3">'youtube'</span><span class="s1">)) {</span>
+            <span class="s7">const </span><span class="s1">urlText = document.createElement(</span><span class="s3">'p'</span><span class="s1">);</span>
+            <span class="s1">urlText.textContent = mediaContent;</span>
+            <span class="s1">mediaContainer.innerHTML = </span><span class="s3">''</span><span class="s1">; </span><span class="s6">// Wyczyszczenie poprzedniego elementu multimedialnego</span>
+            <span class="s1">mediaContainer.appendChild(urlText);</span>
+        <span class="s1">} </span><span class="s7">else </span><span class="s1">{</span>
+            <span class="s1">mediaContainer.innerHTML = </span><span class="s3">''</span><span class="s1">; </span><span class="s6">// Wyczyszczenie elementu multimedialnego, jeśli go nie ma</span>
+        <span class="s1">}</span>
+
+        <span class="s7">if </span><span class="s1">(currentPuzzle === </span><span class="s5">1</span><span class="s1">) {</span>
+            <span class="s7">const </span><span class="s1">passwordText = document.createElement(</span><span class="s3">'p'</span><span class="s1">);</span>
+            <span class="s1">passwordText.textContent = </span><span class="s3">&quot;jtd&quot;</span><span class="s1">;</span>
+            <span class="s1">passwordText.style.color = </span><span class="s3">&quot;#fff&quot;</span><span class="s1">;</span>
+            <span class="s1">passwordContainer.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+            <span class="s1">passwordContainer.appendChild(passwordText);</span>
+        <span class="s1">} </span><span class="s7">else </span><span class="s1">{</span>
+            <span class="s1">passwordContainer.innerHTML = </span><span class="s3">''</span><span class="s1">; </span><span class="s6">// Wyczyszczenie elementu z tekstem hasła</span>
+        <span class="s1">}</span>
+
+        <span class="s7">const </span><span class="s1">contentText = document.createElement(</span><span class="s3">'p'</span><span class="s1">);</span>
+        <span class="s1">contentText.innerHTML = puzzles[currentPuzzle - </span><span class="s5">1</span><span class="s1">].content;</span>
+        <span class="s1">contentContainer.innerHTML = </span><span class="s3">''</span><span class="s1">; </span><span class="s6">// Wyczyszczenie poprzedniego elementu z treścią zagadki</span>
+        <span class="s1">contentContainer.appendChild(contentText);</span>
+    <span class="s1">}</span>
+
+    <span class="s7">function </span><span class="s1">checkPassword() {</span>
+        <span class="s7">const </span><span class="s1">passwordInput = document.getElementById(</span><span class="s3">'passwordInput'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">resultElement = document.getElementById(</span><span class="s3">'result'</span><span class="s1">);</span>
+        <span class="s7">const </span><span class="s1">userAnswer = passwordInput.value.toLowerCase();</span>
+        <span class="s7">const </span><span class="s1">correctAnswer = puzzles[currentPuzzle - </span><span class="s5">1</span><span class="s1">].answer.toLowerCase();</span>
+
+        <span class="s7">if </span><span class="s1">(userAnswer === correctAnswer || (currentPuzzle === </span><span class="s5">6 </span><span class="s1">&amp;&amp; checkCurrentTime(userAnswer))) {</span>
+            <span class="s1">resultElement.textContent = </span><span class="s3">'Poprawne hasło! Przechodzisz do następnej zagadki.'</span><span class="s1">;</span>
+            <span class="s1">currentPuzzle++;</span>
+
+            <span class="s7">if </span><span class="s1">(currentPuzzle &gt; puzzles.length) {</span>
+                <span class="s1">resultElement.textContent = </span><span class="s3">'JESTEŚ BOSSEM TEJ GRY'</span><span class="s1">;</span>
+            <span class="s1">} </span><span class="s7">else </span><span class="s1">{</span>
+                <span class="s1">loadPuzzle();</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s7">else </span><span class="s1">{</span>
+            <span class="s1">resultElement.textContent = </span><span class="s3">'Nieprawidłowe hasło. Spróbuj ponownie.'</span><span class="s1">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s7">function </span><span class="s1">checkCurrentTime(userAnswer) {</span>
+        <span class="s7">const </span><span class="s1">currentTime = </span><span class="s7">new </span><span class="s1">Date().toLocaleTimeString(</span><span class="s3">'pl-PL'</span><span class="s1">, { hour: </span><span class="s3">'2-digit'</span><span class="s1">, minute: </span><span class="s3">'2-digit' </span><span class="s1">});</span>
+        <span class="s7">return </span><span class="s1">userAnswer === currentTime;</span>
+    <span class="s1">}</span>
+
+    <span class="s6">// Inicjalne wczytanie zagadki</span>
+    <span class="s1">loadPuzzle();</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+
+<span class="s0">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>
